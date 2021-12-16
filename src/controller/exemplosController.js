@@ -20,7 +20,10 @@ const getAll = async (req, res) => {
                     const cadastrarPets = await AdoteUmPet.create(req.body);
                     if(atualizarAdoteUmPet){
                         atualizarAdoteUmPet.nome = req.body.nome ||atualizarAdoteUmPet.nome
-                        atualizarAdoteUmPet.cidade = req.body.cidade || atuaalizarAdoteUmPet.animal = req.body.animal || atualizarAdoteUmPet.animal
+                        
+                        atualizarAdoteUmPet.cidade = req.body.cidade 
+                        
+                        atualizarAdoteUmPet.animal = req.body.animal || atualizarAdoteUmPet.animal
 
                         const salvardoteUmPet = await atualizarAdoteUmPet.save();
                         res.status(200).jason({
