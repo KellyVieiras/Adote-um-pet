@@ -14,35 +14,63 @@ const getAll = async (req, res) => {
         
 
         
-            }
-            const criarCadastro = async (req, res) => {
+}
+
+const criarCadastro = async (req, res) => {
                 try {
-                    const cadastrarPets = await AdoteUmPet.create(req.body);
-                    if(atualizarAdoteUmPet){
-                        atualizarAdoteUmPet.nome = req.body.nome ||atualizarAdoteUmPet.nome
-                        
-                        atualizarAdoteUmPet.cidade = req.body.cidade 
-                        
-                        atualizarAdoteUmPet.animal = req.body.animal || atualizarAdoteUmPet.animal
-
-                        const salvardoteUmPet = await atualizarAdoteUmPet.save();
-                        res.status(200).jason({
-                            message: "Dados da adoteumpet,atualizados com sucesso.",
-                            salvarAdoteUmPet
-                        });
-                    }
-
+                    const criarDocerias = await Docerias.create(req.body);
                     res.status(201).json({
                         message: "Cadastro realizado com sucesso",
-                        cadastrarPets
+                        criarDocerias
                     })
                 } catch (error) {
-                    res.status(500).json({message: error.message})
+                    res.status(500).json({message: error.message});
                 }
-            }
+            
+}
+
+const atualizarCadastro = async (req, res) => {
+                        try {
+                            const atualizarPet = await AdoteUmPet.findById(req.params.id);
+                    
+                            if(atualizarPet) {
+                                atualizarPet.nome = req.body.nome || atualizarPet.nome
+                                atualizarPet.cidade = req.body.cidade || atualizarPet.cidade 
+                                
+                                atualizarPet.animal = req.body.animal || atualizarPet.animal
+                    
+                                const salvarPet = await atualizarPet.save();
+            res.status(200).json({
+                message: "Dados do Pet, atualizados com sucesso.",
+                salvarPet
+            });
+        }
+
+        res.status(400).json({message: "Me desculpe, animal não encontrado!"});
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+}
+
+const deletarCadastro = async (req, res) => {
+    try {
+        const adoteUmPet = await AdoteUmPet.findById(req.params);
+        if(!adoteUmPet) {
+            res.status(404).json({message: "animal não encontrado."})
+        }
+        await adoteUmPet.delete();
+        res.status(204).json({message: "Animal deletado com sucesso."})
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+}
+
+                    
             
 
 module.exports = {
     getAll,
-    criarCadastro
+    criarCadastro,
+    atualizarCadastro,
+    deletarCadastro
 }
