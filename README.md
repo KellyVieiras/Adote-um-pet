@@ -4,7 +4,7 @@
     <p align="center">Projeto Final {Reprograma}<p>
 </h1>
 <p align="center">
-<img src="" width="350" height="300"/>
+<img src="./assets/Adoteumpet.gif" width="350" height="300"/>
 </p>
 <br>
 
@@ -208,3 +208,12 @@ Aceito sugestões que sejam viaveis para melhorar a vida destes animais que nos 
 ## [LinkedIn](https://www.linkedin.com/in/kelly-vieira/) 
 
 <br>
+
+## 🥰 Agradecimentos:
+
+São tantas pessoas para agradecer! mas vamos por parte.
+Foram muitas as pessoas que de forma direta ou indireta, colaboraram para que este momento de aprendizagem fluisse. Então primeiro agradeço a Deus, por ter dado a mim, o privilégio de viver estes momentos de aprendizagem com pessoas de corações tão bons. 
+Agradeço a minha família que sempre me deixou quieta no quarto durante as aulas rsrs.
+Agradeço a todas as professoras e monitoras, vocês são incriveis.
+Agradeço as meninas do grupo reprogramadas, sempre tão solicitas e unidas.
+E o meu agradecimento especial a Hannah Freitas e Raquel Andrade que me buscaram pela mão e me levantaram. Sem vocês, eu não teria chegado ao fim. 
