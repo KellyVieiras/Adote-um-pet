@@ -89,7 +89,7 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 
 ## 📁 Arquitetura MVC 
 
-
+```
  📁 Adote-um-pet
    |
    |-  📁 src
@@ -119,7 +119,7 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
    |- 📑 package.json
    |- 📑 README.md
    |- 📑 server.js
-
+```
 <br>
 
 ## 🔃 Rotas
